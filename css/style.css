@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+/*--- Colors ---*/
+
+:root{
+    --soft-blue: hsl(215, 51%, 70%);
+    --cyan: hsl(178, 100%, 50%);
+    --transparent-cyan: hsla(178, 100%, 50%, 0.3);
+    --background-color: hsl(217, 54%, 11%);
+    --dark-blue: hsl(216, 50%, 16%);
+    --line-color: hsl(215, 32%, 27%);
+}
+
+/*--- Reset ---*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+body { 
+    background-color: var(--background-color);
+    color: white;
+
+    font-family: 'Outfit', sans-serif;
+    font-size: 1rem;
+}
+
+.center{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.container{
+    background-color: var(--dark-blue);
+
+    height: 600px;
+    width: 350px;
+
+    border-radius: 12px;
+    padding: 24px;
+    box-shadow: 0px 10px 30px 40px rgba(0,0,0,0.15);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/*--- NFT ---*/
+
+img.nft{
+    border-radius: 10px;
+    width: 300px;
+    position: relative;
+}
+
+.image-container .hover{
+    position: absolute;
+    background-color: var(--transparent-cyan);
+    border-radius: 10px;
+    top: 4%;
+    width: 300px;
+    height: 300px;
+    display: none;
+}
+
+.image-container:hover .hover{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+/*--- Text ---*/
+
+.text-box{
+    height: 135px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.nft-name{
+    font-size: 22px;
+    font-weight: 600;
+    transition: color 0.15s;
+}
+
+.nft-name:hover{
+    color: var(--cyan);
+    cursor: pointer;
+}
+
+.description{
+    font-size: 18px;
+    font-weight: 300;
+    color: var(--soft-blue);
+}
+
+.information{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 10px;
+}
+
+.price, .time-left{
+    width: 100px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.eth{
+    width: 11px;
+    height: 18px;
+}
+
+.clock{
+    width: 17px;
+    height: 17px;
+}
+
+.time-left p{
+    color: var(--soft-blue);
+}
+
+.price p{
+    color: var(--cyan);
+    font-weight: 500;
+}
+
+/*--- Creator ---*/
+
+.creator{
+    border-top: 2px solid var(--line-color);
+    height: 60px;
+    padding-top: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.profile-picture{
+    width: 32px;
+    border: 1px solid white;
+    border-radius: 50%;
+}
+
+.creator p{
+    margin-left: 18px;
+    color: var(--soft-blue);
+    font-weight: 300;
+}
+
+.creator span.name{
+    color: white;
+    font-weight: 400;
+    transition: color 0.15s;
+}
+
+.creator span.name:hover{
+    color: var(--cyan);
+    cursor: pointer;
+}
